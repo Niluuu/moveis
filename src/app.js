@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Movie from './containers/movie';
-import Home from './containers/home';
-import Nav from './components/nav';
-import Watch from './containers/watch';
-import history from "./history"
-import Notfound from "./components/notFound"
+import Home from "./containers/home";
+import Nav from "./components/nav";
+import Watch from "./containers/watch";
+import Notfound from "./components/notFound";
 
 function App() {
   return (
@@ -16,10 +14,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/movie">
-            <Movie />
-          </Route>
-          <Route path="/about(/:id)"  component={Watch} />
+          <Route path="/watch/:id" component={Watch} />
           <Route component={Notfound} />
         </Switch>
       </div>

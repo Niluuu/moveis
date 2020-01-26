@@ -7,7 +7,7 @@
 a {
   padding: 0px;
   text-decoration: none;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 li {
@@ -22,14 +22,14 @@ h3 {
 }
 
 $base-color: #1c1c1c;
-$border-dark: rgba(0, 0, 0, .075);
+$border-dark: rgba(0, 0, 0, 0.075);
 $dark-text: #333;
 $white: #fff;
-$dark-shadow : rgba(0, 0, 0, .5);
+$dark-shadow: rgba(0, 0, 0, 0.5);
 $grey-color: #cfd2da;
 $liteGray-color: #f2f2f2;
 $red: #dd1b2f;
-$red-hover: #C10E0E;
+$red-hover: #c10e0e;
 
 body {
   background: $liteGray-color;
@@ -41,7 +41,7 @@ body {
   display: flex;
   align-items: center;
   background-color: $base-color;
-  transition: background-color .2s linear 0s;
+  transition: background-color 0.2s linear 0s;
   max-height: 50px;
   height: 50px;
   position: sticky;
@@ -84,7 +84,7 @@ body {
     border: 0;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px $border-dark;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     padding: 7px 7px 7px 40px;
     font-size: 15px;
     outline: 0;
@@ -174,7 +174,7 @@ body {
       &::before {
         font-size: 18px;
         color: $white;
-        opacity: .25;
+        opacity: 0.25;
       }
     }
 
@@ -196,7 +196,7 @@ body {
     padding: 15px;
     color: $white;
     background: $dark-shadow;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
     z-index: 1000 !important;
 
     .caption-title {
@@ -226,7 +226,6 @@ body {
         background: $red-hover;
       }
     }
-
   }
 }
 
@@ -243,6 +242,7 @@ body {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    border-radius: 10px;
   }
 
   .movie-img {
@@ -253,6 +253,7 @@ body {
       background: $dark-shadow;
       position: absolute;
       opacity: 0;
+      border-radius: 10px;
     }
   }
 
@@ -300,7 +301,32 @@ body {
     font-weight: 600;
     line-height: 18px;
   }
+}
 
+.watch-header {
+  width: 100%;
+  height: 400px;
+  padding: 5px;
+  .video-react.video-react-fluid {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    padding-top: 30.25% !important;
+  }
+  .watch-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .movie-img {
+    width: 150px;
+    height: 190px;
+    background-clip: border-box !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-radius: 10px;
+  }
 }
 
 .footer {
