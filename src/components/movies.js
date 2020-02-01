@@ -18,13 +18,7 @@ class Movies extends Component {
       <div className="movie-section">
         <Row gutter={[32, 32]}>
           {movies &&
-            movies.map(movie => (
-              <MovieList
-                {...movie}
-                key={movie.id}
-                getMoveData={() => this.getMoveData(movie.id)}
-              />
-            ))}
+            movies.map(movie => <MovieList {...movie} key={movie.id} />)}
         </Row>
       </div>
     );
